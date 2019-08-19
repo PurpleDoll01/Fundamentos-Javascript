@@ -1,15 +1,18 @@
-var nombre = 'PurpleDoll', apellido = 'Dollanganger';
+var edad = 29;
+edad += 1;
 
-var nombreEnMayusculas = nombre.toUpperCase();
-var apellidoEnMinusculas = apellido.toLowerCase();
+var peso = 75;
+peso -= 2;
 
-var primeraLetraDelNombre = nombre.charAt(0);
-var cantidadDeLetrasDelNombre = nombre.length;
+var sandwich = 1;
+peso += sandwich;
+var jugarAlFutbol = 3;
+peso -= jugarAlFutbol;
 
-var nombreCompleto = `${nombre} ${apellido.toUpperCase()}`;
+var precioDeVino = 200.3;
+var total = Math.round(precioDeVino * 100 * 3) / 100;
+var totalStr = total.toFixed(2);
 
-var str = nombre.substr(1, 2);
-
-var ultima = nombre.charAt(nombre.length-1);
-
-console.log(ultima);
+var pizza = 8;
+var persona = 2;
+var porciones = pizza / persona; 
