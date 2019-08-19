@@ -1,7 +1,9 @@
-var nombre = 'PurpleDoll', edad = 29;
+var nombre = 'PurpleDoll';
 
-function imprimirEdad(n, e) {
-  console.log(`${n} tiene ${e} años`)
+function imprimirEnMayusculas(n) {
+  n = n.toUpperCase();
+  console.log(n);
 }
 
-imprimirEdad(nombre, edad);
+imprimirEnMayusculas(nombre);
+console.log(nombre);
