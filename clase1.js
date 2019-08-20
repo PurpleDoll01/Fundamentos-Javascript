@@ -26,3 +26,7 @@ imprimirEnMayusculas(dario);
 imprimirEnMayusculas({ nombre: 'Pepito' })
 
 imprimirNombreYEdad(purpledoll);
+
+function cumpleanos(persona) {
+  persona.edad += 1;
+}
