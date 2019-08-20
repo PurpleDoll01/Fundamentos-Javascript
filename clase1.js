@@ -10,10 +10,19 @@ var dario = {
   edad: 34
 }
 
-function imprimirEnMayusculas({ nombre }) {
+function imprimirEnMayusculas(persona) {
+  var { nombre } = persona;
   console.log(nombre.toUpperCase());
+}
+
+function imprimirNombreYEdad(persona) {
+  var { nombre } = persona;
+  var { edad } = persona;
+  console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`);
 }
 
 imprimirEnMayusculas(purpledoll);
 imprimirEnMayusculas(dario);
 imprimirEnMayusculas({ nombre: 'Pepito' })
+
+imprimirNombreYEdad(purpledoll);
