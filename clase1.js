@@ -1,32 +1,39 @@
 var purpledoll = {
-  nombre: 'PurpleDoll',
-  apellido: 'Dollanganger',
-  edad: 28
+  nombre: 'Mariana',
+  apellido: 'Valencia',
+  edad: 29,
+  ingeniero: false,
+  cocinero: false,
+  cantante: false,
+  dj: false,
+  guitarrista: false,
+  drone: true
 }
 
-var dario = {
-  nombre: 'Dario',
-  apellido: 'Susnisky',
-  edad: 34
+function imprimirProfesiones(persona) {
+  console.log(`${persona.nombre} es:`);
+
+  if (persona.ingeniero) {
+    console.log('Ingeniero');
+  } else {
+    console.log('No es ingeniero');
+  }
+  if (persona.cocinero) {
+    console.log('Cocinero');
+  }
+  if (persona.drone) {
+    console.log('Vuela drone');
+  }
 }
 
-function imprimirEnMayusculas(persona) {
-  var { nombre } = persona;
-  console.log(nombre.toUpperCase());
+imprimirProfesiones(purpledoll);
+
+function imprimirEdad(persona) {
+  if (persona.edad >= 18) {
+    console.log(`${persona.nombre} es mayor de edad`);
+  } else {
+    console.log(`${persona.nombre} es menor de edad`);
+  }
 }
 
-function imprimirNombreYEdad(persona) {
-  var { nombre } = persona;
-  var { edad } = persona;
-  console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`);
-}
-
-imprimirEnMayusculas(purpledoll);
-imprimirEnMayusculas(dario);
-imprimirEnMayusculas({ nombre: 'Pepito' })
-
-imprimirNombreYEdad(purpledoll);
-
-function cumpleanos(persona) {
-  persona.edad += 1;
-}
+imprimirEdad(purpledoll);
