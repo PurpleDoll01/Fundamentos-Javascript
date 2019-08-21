@@ -10,6 +10,12 @@ var purpledoll = {
   drone: true
 }
 
+var juan = {
+  nombre: 'Juan',
+  apellido: 'Gomez',
+  edad: 13
+}
+
 function imprimirProfesiones(persona) {
   console.log(`${persona.nombre} es:`);
 
@@ -26,14 +32,16 @@ function imprimirProfesiones(persona) {
   }
 }
 
-imprimirProfesiones(purpledoll);
+var mayoriaDeEdad = 18;
 
-function imprimirEdad(persona) {
-  if (persona.edad >= 18) {
+function esMayorDeEdad(persona) {
+  return persona.edad >= mayoriaDeEdad;
+}
+
+function imprimirSiEsMayorDeEdad(persona) {
+  if (esMayorDeEdad(persona)) {
     console.log(`${persona.nombre} es mayor de edad`);
   } else {
     console.log(`${persona.nombre} es menor de edad`);
   }
 }
-
-imprimirEdad(purpledoll);
