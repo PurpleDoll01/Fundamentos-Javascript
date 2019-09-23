@@ -7,21 +7,25 @@ var purpledoll = {
 
 console.log(`Al inicio del año ${purpledoll.nombre} pesa ${purpledoll.peso}kg`);
 
-const INCREMENTO_PESO = 0.2;
+const INCREMENTO_PESO = 0.3;
 const DIAS_DEL_ANO = 365;
 
 const aumentarDePeso = persona => persona.peso += INCREMENTO_PESO;
 const adelgazar = persona => persona.peso -= INCREMENTO_PESO;
+const comeMucho = () => Math.random() < 0.3;
+const realizaDeporte = () => Math.random() < 0.4; 
 
+const META = purpledoll.peso - 3;
+var dias = 0;
 
-for (var i=1; i <= DIAS_DEL_ANO; i++) {
-  var random = Math.random();
-
-  if (random < 0.25) {
+while (purpledoll.peso > META) {
+  if (comeMucho()) {
     aumentarDePeso(purpledoll);
-  } else if (random < 0.5) {
+  }
+  if (realizaDeporte()) {
     adelgazar(purpledoll);
-  } 
+  }
+  dias += 1;
 }
 
-console.log(`Al final del año ${purpledoll.nombre} pesa ${purpledoll.peso.toFixed(1)}kg`);
+console.log(`Pasaron ${dias} días hasta que ${purpledoll.nombre} adelgazó 3kg`);
