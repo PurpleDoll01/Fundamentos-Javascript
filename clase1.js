@@ -41,4 +41,13 @@ var personas = [sacha, alan, martin, dario, vicky, paula];
 
 var personasAltas = personas.filter(esAlta);
 
-console.log(personasAltas);
+const pasarAlturaACms = persona => {
+  return {
+    ...persona,
+    altura: persona.altura * 100
+  }
+}
+
+var personasCms = personas.map(pasarAlturaACms); 
+
+console.log(personasCms);
