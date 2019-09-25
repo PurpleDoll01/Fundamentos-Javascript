@@ -1,14 +1,14 @@
-var contador = 0;
+var signo = prompt('¿Cuál es tu signo?');
 
-const llueve = () => Math.random() < 0.25;
-
-do {
-  contador++
-} while (!llueve())
-
-if (contador <= 1) {
-  console.log(`Fui a ver si llovía una vez.`);
-} else {
-  console.log(`Fui a ver si llovía ${contador} veces.`)
+switch (signo) {
+  case 'acuario':
+    console.log('Acuario');
+    break
+  case 'tauro':
+    console.log('Tauro');
+     break
+  default: 
+    console.log('No tienes signo');
+    break
 }
 
