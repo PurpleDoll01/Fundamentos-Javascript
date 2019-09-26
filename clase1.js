@@ -1,14 +1,18 @@
-function Persona (nombre, apellido) {
+function Persona (nombre, apellido, altura) {
   this.nombre = nombre
   this.apellido = apellido
+  this.altura = altura
 }
 
 Persona.prototype.saludar = function () {
   console.log(`Hola, me llamo ${this.nombre} ${this.apellido}`);
 }
 
-var purpledoll = new Persona('Mariana', 'Valencia');
-purpledoll.saludar();
-
-var erika = new Persona ('Erika', 'Luna');
-erika.saludar();
+Persona.prototype.soyAlto = function () {
+  debugger
+  return this.altura > 1.8;
+}
+ 
+var purpledoll = new Persona('Mariana', 'Valencia', 1.54);
+var erika = new Persona ('Erika', 'Luna', 1.65);
+var arturo = new Persona ('Arturo', 'Martinez', 1.89);
