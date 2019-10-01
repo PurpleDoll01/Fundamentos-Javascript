@@ -4,23 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Closures</title>
+  <title>Datos inmutables</title>
 </head>
 <body>
   <script>
-    function crearSaludo(finalDeFrase) {
-      return function(nombre) {
-        console.log(`Hola ${nombre} ${finalDeFrase}`)
-      }
+    const purple = {
+      nombre: 'Mariana',
+      apellido: 'Valencia',
+      edad: 28
     }
 
-    const saludoArgentino = crearSaludo('che')
-    const saludoMexicano = crearSaludo('guey')
-    const saludoColombiano = crearSaludo('parce')
-
-    saludoArgentino('Purple')
-    saludoMexicano('Purple')
-    saludoColombiano('Purple')
+    const cumpleanos = persona => ({
+      ...persona,
+      edad: persona.edad + 1
+    })
+   
   </script>
 </body>
 </html>
