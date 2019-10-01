@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Datos inmutables</title>
+  <title>Cambiando contexto al llamar función </title>
 </head>
 <body>
   <script>
     const purple = {
       nombre: 'Mariana',
-      apellido: 'Valencia',
-      edad: 28
+      apellido: 'Valencia'
     }
 
-    const cumpleanos = persona => ({
-      ...persona,
-      edad: persona.edad + 1
-    })
+    const yesika = {
+      nombre: 'Yesika',
+      apellido: 'Cortes'
+    }
+
+    function saludar(saludo = 'Hola') {
+      console.log(`${saludo}, mi nombre es ${this.nombre}`)
+    }
+
+    const saludarAPurple = saludar.bind(purple, 'Hola, che') 
    
   </script>
 </body>
