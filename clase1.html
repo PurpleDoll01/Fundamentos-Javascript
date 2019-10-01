@@ -4,14 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cómo funciona el tiempo en JavaScript</title>
+  <title>Manejo de fechas</title>
 </head>
 <body>
-  <script
-    src="http://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous">
+  <script>
+    function diasEntreFechas(fecha1, fecha2) {
+      const unDia = 1000 * 60 * 60 * 24
+      const diferencia = Math.abs(fecha1 - fecha2)
+
+      return Math.floor(diferencia / unDia)
+    }
+
+    const hoy = new Date()
+    const nacimiento = new Date(1990, 4, 11)
+
   </script>
-  <script src="clase1.js"></script>
 </body>
 </html>
