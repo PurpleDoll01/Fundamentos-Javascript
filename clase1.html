@@ -4,26 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Recursividad</title>
+  <title>Closures</title>
 </head>
 <body>
   <script>
-    function factorial(n) {
-      if (!this.cache) {
-        this.cache = {}
+    function crearSaludo(finalDeFrase) {
+      return function(nombre) {
+        console.log(`Hola ${nombre} ${finalDeFrase}`)
       }
-
-      if (this.cache[n]) {
-        return this.cache[n]
-      }
-
-      if (n ===1) {
-        return 1
-      }
-
-      this.cache[n] = n * factorial (n - 1)
-      return this.cache[n]
     }
+
+    const saludoArgentino = crearSaludo('che')
+    const saludoMexicano = crearSaludo('guey')
+    const saludoColombiano = crearSaludo('parce')
+
+    saludoArgentino('Purple')
+    saludoMexicano('Purple')
+    saludoColombiano('Purple')
   </script>
 </body>
 </html>
